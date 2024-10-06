@@ -23,7 +23,7 @@ use panic_semihosting as _;
 fn main() -> ! {
     init_heap();
     hprintln!("Hello, worlds!");
-    // New executor that can run up to 32 tasks
+    // New executor that can run up to 64 tasks
     let mut executor = executor::Executor::new::<64>();
 
     // Spawn a task
