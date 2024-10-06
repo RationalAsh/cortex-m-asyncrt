@@ -2,9 +2,11 @@
 
 This crate provides a minimal async runtime for Cortex-M microcontrollers. It's based on the tutorial by Phil Opperman,
 [Writing an OS in Rust](https://os.phil-opp.com/async-await/). The runtime is designed to be as simple as possible, while
-still providing a good foundation for building async applications on Cortex-M microcontrollers. Note that this is a project
-for learning purposes and is not intended for production use. For a more complete async runtime, consider using the
-[Embassy Project](https://embassy.dev).
+still providing a good foundation for building async applications on Cortex-M microcontrollers.
+
+Note that this is a project for learning purposes and is not intended for production use. For a more complete async runtime,
+consider using the [Embassy Project](https://embassy.dev). Also consider using [RTIC](https://rtic.rs) for building real-time
+applications on Cortex-M microcontrollers.
 
 
 ## Minimal Example
