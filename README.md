@@ -47,3 +47,20 @@ async fn example_fn() -> u32 {
     42
 }
 ```
+
+Compile and run the example with qemu.
+
+```sh
+qemu-system-arm -cpu cortex-m4 \
+                -machine lm3s6965evb \
+                -nographic \
+                -semihosting-config enable=on,target=native \
+                -kernel target/thumbv7em-none-eabihf/release/qemu-test
+```
+
+You should see the following output:
+
+```
+Hello, worlds!
+r = 42
+```
