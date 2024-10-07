@@ -1,7 +1,7 @@
 extern crate alloc;
 
 use super::*;
-use alloc::collections::{BTreeMap, VecDeque};
+use alloc::collections::BTreeMap;
 use alloc::sync::Arc;
 use alloc::task::Wake;
 use core::task::{Context, Poll, RawWaker, RawWakerVTable, Waker};
@@ -122,7 +122,7 @@ impl Executor {
     }
 }
 
-fn dummy_raw_waker() -> RawWaker {
+pub fn dummy_raw_waker() -> RawWaker {
     fn no_op(_: *const ()) {}
     fn clone(_: *const ()) -> RawWaker {
         dummy_raw_waker()
@@ -133,6 +133,6 @@ fn dummy_raw_waker() -> RawWaker {
     RawWaker::new(0 as *const (), vtable)
 }
 
-fn dummy_waker() -> Waker {
+pub fn dummy_waker() -> Waker {
     unsafe { Waker::from_raw(dummy_raw_waker()) }
 }

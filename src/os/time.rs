@@ -1,7 +1,7 @@
-use conquer_once::spin::OnceCell;
-use cortex_m::peripheral::syst;
+// use conquer_once::spin::OnceCell;
+// use cortex_m::peripheral::syst;
 use cortex_m_rt::exception;
-use fugit::{Duration, Instant};
+// use fugit::{Duration, Instant};
 
 /// Create a global static instance of the `Timer` struct.
 // static TIMER: OnceCell<Timer> = OnceCell::uninit();
