@@ -16,6 +16,7 @@ use fugit::{Duration, Instant};
 //     }
 // }
 
+// Define the SysTick interrupt handler.
 #[exception]
 fn SysTick() {
     cortex_m::asm::nop();

@@ -38,7 +38,9 @@ impl TaskId {
 pub struct Task {
     /// A unique identifier for the task.
     id: TaskId,
-    /// The future representing the task.
+    /// The future representing the task. The Pin<Box<>> wrapper ensures that that the
+    /// future is not moved in memory. The Output type of the future is (), indicating
+    /// that the future does not return a value - it just runs to completion.
     future: Pin<Box<dyn Future<Output = ()>>>,
 }
 
