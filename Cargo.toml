@@ -9,6 +9,7 @@ homepage = "https://github.com/RationalAsh/cortex-m-asyncrt"
 readme = "README.md"
 keywords = ["cortex-m", "async", "runtime", "embedded", "no_std"]
 categories = ["embedded", "no-std", "asynchronous"]
+exclude = [".zed"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
