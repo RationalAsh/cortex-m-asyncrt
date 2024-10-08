@@ -4,3 +4,4 @@ pub fn add(left: usize, right: usize) -> usize {
 }
 
 pub mod os;
+pub use macros::async_main;
